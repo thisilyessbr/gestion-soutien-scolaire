@@ -98,11 +98,19 @@ A Jakarta EE web application for managing educational support programs. Built in
 
 The `Dockerfile` packages the application together with MySQL in a single container, making it easy to deploy on platforms like Render, Railway, or Fly.io using environment variables.
 
-### Deploy to Render
+### Free Deployment Options
+
+#### Option A: Koyeb (Free, no credit card required)
+
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/thisilyessbr/gestion-soutien-scolaire&branch=main&name=gestion-soutien-scolaire&builder=dockerfile&ports=8080;http;/)
+
+Koyeb's free tier lets you run the full application without entering a credit card.
+
+#### Option B: Render
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/thisilyessbr/gestion-soutien-scolaire)
 
-Click the button above to deploy the application on Render. The multi-stage `Dockerfile` builds the WAR and starts Tomcat + MySQL in a single container.
+Render also has a free tier, but the service spins down after inactivity and takes ~30 seconds to wake up.
 
 ### Live Demo
 
