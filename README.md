@@ -96,18 +96,11 @@ A Jakarta EE web application for managing educational support programs. Built in
 
 ## Deployment
 
-The `Dockerfile` packages the application together with MySQL in a single container, making it easy to deploy on platforms like Koyeb, Railway, or Fly.io using environment variables.
-
-### Free Deployment
-
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/thisilyessbr/gestion-soutien-scolaire&branch=main&name=gestion-soutien-scolaire&builder=dockerfile&ports=8080;http;/)
-
-Click the button above to deploy the full interactive application on Koyeb's free tier (no credit card required).
+The `Dockerfile` packages the application together with MySQL in a single container, making it easy to deploy on any container platform using environment variables.
 
 ### Live Demo
 
 - **Static demo page**: https://thisilyessbr.github.io/gestion-soutien-scolaire/
-- **Full interactive app**: Click the **Deploy to Koyeb** button above.
 
 ## Author
 
