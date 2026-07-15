@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: gestion-soutien-scolaire
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: standard
+    envVars:
+      - key: JAVA_OPTS
+        value: -Xmx256m
+      - key: DB_HOST
+        value: localhost
+      - key: DB_PORT
+        value: "3306"
+      - key: DB_NAME
+        value: gestion_du_soutien
+      - key: DB_USER
+        value: appuser
+      - key: DB_PASS
+        value: apppass
+      - key: DB_USE_SSL
+        value: "false"
+    healthCheckPath: /

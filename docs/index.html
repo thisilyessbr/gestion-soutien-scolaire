@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion du Soutien Scolaire — Live Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #1e293b;
+            --muted: #64748b;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --warning: #f59e0b;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 4rem 1.5rem 3rem;
+            text-align: center;
+        }
+        header h1 { margin: 0 0 1rem; font-size: 2.5rem; font-weight: 800; }
+        header p { max-width: 700px; margin: 0 auto 1.5rem; font-size: 1.125rem; opacity: 0.95; }
+        .badges { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 0.35rem 0.9rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+        .card {
+            background: var(--card);
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+        }
+        .card h2 { margin-top: 0; font-size: 1.5rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .feature-list { list-style: none; padding: 0; margin: 0; }
+        .feature-list li { padding: 0.5rem 0; padding-left: 1.75rem; position: relative; }
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: 700;
+        }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { text-align: left; padding: 0.75rem; border-bottom: 1px solid var(--border); }
+        th { background: var(--bg); font-weight: 600; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.875rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .btn:hover { background: var(--primary-dark); }
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-outline:hover { background: var(--primary); color: white; }
+        .actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+        .notice {
+            background: #eff6ff;
+            border-left: 4px solid var(--primary);
+            padding: 1rem 1.25rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            margin-bottom: 1.5rem;
+        }
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .tech-tag {
+            background: var(--bg);
+            color: var(--text);
+            padding: 0.35rem 0.75rem;
+            border-radius: 0.375rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+        }
+        footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.9rem; }
+        .screenshot-placeholder {
+            background: var(--bg);
+            border: 2px dashed var(--border);
+            border-radius: 0.75rem;
+            padding: 3rem 1rem;
+            text-align: center;
+            color: var(--muted);
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gestion du Soutien Scolaire</h1>
+        <p>A full-stack Jakarta EE web application for managing educational support programs — students, professors, sessions, attendance, payments, and reports.</p>
+        <div class="badges">
+            <span class="badge">Jakarta EE</span>
+            <span class="badge">Servlets & JSP</span>
+            <span class="badge">MySQL</span>
+            <span class="badge">Docker</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="notice">
+            <strong>Try the live app</strong> — Use the demo credentials below to explore the admin, professor, and student dashboards.
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Demo Accounts</h2>
+                <table>
+                    <tr><th>Role</th><th>Login</th><th>Password</th></tr>
+                    <tr><td>Admin</td><td><code>admin</code></td><td><code>admin</code></td></tr>
+                    <tr><td>Professor</td><td><code>said.alami</code></td><td><code>said</code></td></tr>
+                    <tr><td>Student</td><td><code>ilyes.saber</code></td><td><code>ilyes</code></td></tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>Live Links</h2>
+                <p>Access the deployed application or view the source code on GitHub.</p>
+                <div class="actions">
+                    <a class="btn" href="https://gestion-soutien-scolaire.onrender.com" target="_blank">Open Live App</a>
+                    <a class="btn btn-outline" href="https://github.com/thisilyessbr/gestion-soutien-scolaire" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Key Features</h2>
+            <ul class="feature-list">
+                <li>Role-based dashboards for Admin, Professor, and Student</li>
+                <li>User, course, classroom, and session management</li>
+                <li>Attendance tracking and tuition payment records</li>
+                <li>Announcements and PDF report generation</li>
+                <li>Responsive JSP-based UI with custom CSS</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Technology Stack</h2>
+            <div class="tech-tags">
+                <span class="tech-tag">Java 11</span>
+                <span class="tech-tag">Jakarta EE</span>
+                <span class="tech-tag">Servlets 5.0</span>
+                <span class="tech-tag">JSP</span>
+                <span class="tech-tag">MySQL 8</span>
+                <span class="tech-tag">Maven</span>
+                <span class="tech-tag">Tomcat 10</span>
+                <span class="tech-tag">iText 5</span>
+                <span class="tech-tag">Gson</span>
+                <span class="tech-tag">Docker</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Screenshots</h2>
+            <div class="screenshot-placeholder">
+                <p>Interactive screenshots will be added here soon.</p>
+                <p>In the meantime, open the live app with the demo accounts above.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Built by <strong>Ilyes Saber</strong> — 2023 refreshed for portfolio showcase.
+    </footer>
+</body>
+</html>
