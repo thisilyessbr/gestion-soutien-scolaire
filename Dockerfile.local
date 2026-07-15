@@ -1,0 +1,14 @@
+# ========================================================
+# Local development Dockerfile (uses external MySQL via Docker Compose)
+# ========================================================
+
+FROM tomcat:10.1-jdk11-temurin
+
+# Remove default Tomcat webapps and deploy our WAR as ROOT
+RUN rm -rf /usr/local/tomcat/webapps/*
+COPY target/projetJee22-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
+
+# Database connection is configured via environment variables at runtime
+EXPOSE 8080
+
+CMD ["catalina.sh", "run"]
