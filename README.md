@@ -107,7 +107,7 @@ Click the button above to deploy the application on Render. The multi-stage `Doc
 ### Live Demo
 
 - **Static demo page**: https://thisilyessbr.github.io/gestion-soutien-scolaire/
-- **Live application** (after Render deploy): https://gestion-soutien-scolaire.onrender.com
+- **Full interactive app**: Click the **Deploy to Render** button above to launch the live JEE application.
 
 ## Author
 
