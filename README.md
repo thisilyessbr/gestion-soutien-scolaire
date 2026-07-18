@@ -98,9 +98,7 @@ A Jakarta EE web application for managing educational support programs. Built in
 
 The `Dockerfile` packages the application together with MySQL in a single container, making it easy to deploy on any container platform using environment variables.
 
-### Live Demo
 
-- **Static demo page**: https://thisilyessbr.github.io/gestion-soutien-scolaire/
 
 ## Author
 
